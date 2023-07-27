@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.RequestOTPActivity">
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:id="@+id/loading"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:indeterminate="true"
+        app:mpb_progressStyle="horizontal"
+        app:mpb_useIntrinsicPadding="false"
+        app:mpb_progressTint="@color/yellow_light"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/addPhoneNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    <TextView
+        android:id="@+id/addPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="+91899887523"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:contentDescription="edit"
+        android:src="@drawable/baseline_edit_24"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enter_otp_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter The \nOTP"
+        android:textSize="30sp"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addPhoneNumberLayout" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:background="@drawable/edittext_box"
+        android:textAlignment="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:maxLength="4"
+        android:inputType="number"
+        tools:text="8794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_otp_title"/>
+
+    <LinearLayout
+        android:id="@+id/phone_number_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:cornerRadius="20dp"
+            android:text="Continue"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:backgroundTint="@color/yellow_dark" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="00:00"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

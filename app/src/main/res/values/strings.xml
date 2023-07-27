@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Aisle Clone</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_your_n_phone_number">Enter Your \nPhone Number</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="discover">Discover</string>
+    <string name="notes">Notes</string>
+    <string name="matches">Matches</string>
+    <string name="profile">Profile</string>
+    <string name="picture">Picture</string>
+    <string name="premium_member_label">Premium members can \nview all their likes at once</string>
+    <string name="interested_in_you">Interested in You</string>
+    <string name="tap_notes">Tap to review 50+ notes</string>
+</resources>
